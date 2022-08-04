@@ -42,6 +42,11 @@
 		5B7EB9410499542E8C5724F5 /* Pods-Doctor4you-Doctor4youTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor4you-Doctor4youTests.debug.xcconfig"; path = "Target Support Files/Pods-Doctor4you-Doctor4youTests/Pods-Doctor4you-Doctor4youTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Doctor4you.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Doctor4you.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Doctor4you/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88519AAC2898D6A300EC9A75 /* AvenirLTProBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirLTProBook.otf; sourceTree = "<group>"; };
+		88519AAD2898D6CC00EC9A75 /* AvenirLTProHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirLTProHeavy.otf; sourceTree = "<group>"; };
+		88519AAE2898D6E900EC9A75 /* AvenirLTProLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirLTProLight.otf; sourceTree = "<group>"; };
+		88519AAF2898D6F200EC9A75 /* AvenirLTProMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirLTProMedium.otf; sourceTree = "<group>"; };
+		88519AB02898D70900EC9A75 /* AvenirLTProRoman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AvenirLTProRoman.otf; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Doctor4you-Doctor4youTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor4you-Doctor4youTests.release.xcconfig"; path = "Target Support Files/Pods-Doctor4you-Doctor4youTests/Pods-Doctor4you-Doctor4youTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -86,6 +91,7 @@
 		13B07FAE1A68108700A75B9A /* Doctor4you */ = {
 			isa = PBXGroup;
 			children = (
+				88519AAB2898D64C00EC9A75 /* Resources */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -135,6 +141,18 @@
 				00E356EE1AD99517003FC87E /* Doctor4youTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		88519AAB2898D64C00EC9A75 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88519AB02898D70900EC9A75 /* AvenirLTProRoman.otf */,
+				88519AAF2898D6F200EC9A75 /* AvenirLTProMedium.otf */,
+				88519AAE2898D6E900EC9A75 /* AvenirLTProLight.otf */,
+				88519AAD2898D6CC00EC9A75 /* AvenirLTProHeavy.otf */,
+				88519AAC2898D6A300EC9A75 /* AvenirLTProBook.otf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {

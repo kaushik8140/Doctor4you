@@ -1,0 +1,52 @@
+import * as Yup from 'yup';
+
+const phoneRegExp =
+    /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+
+export const LoginSchema = Yup.object().shape({
+    email: Yup.string().email().required('Required email!').label('Email'),
+    password: Yup.string()
+        .required('Required password')
+        .min(4, 'Short!')
+        .label('Password'),
+});
+
+export const SignupSchema = Yup.object().shape({
+    email: Yup.string().email().required('Required email!').label('Email'),
+    name: Yup.string()
+        .required('Required name')
+        .min(2, 'Short!')
+        .label('name'),
+    phone: Yup.string()
+        .required('Required phone!')
+        .matches(phoneRegExp, 'Phone number is not valid'),
+    password: Yup.string()
+        .required('Required password!')
+        .min(4, 'Short!')
+        .label('Password'),
+});
+
+
+export const ForgotPasswordSchema = Yup.object().shape({
+    phone: Yup.string()
+        .required('Required phone!')
+        .matches(phoneRegExp, 'Phone number is not valid'),
+});
+
+export const ResetPasswordSchema = Yup.object().shape({
+    password: Yup.string()
+        .min(4, 'Short!')
+        .required('Password Required')
+        .label('Password'),
+    conformpassword: Yup.string()
+        .required('Required conformpassword!')
+        .min(4, 'Short!')
+        .label('Password')
+        .when('password', {
+            is: val => (val && val.length > 0 ? true : false),
+            then: Yup.string().oneOf(
+                [Yup.ref('password')],
+                'Both password need to be the same',
+            ),
+        }),
+});

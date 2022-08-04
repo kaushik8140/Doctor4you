@@ -37,6 +37,14 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+  <key>UIAppFonts</key>
+  <array>
+    <string>AvenirLTProBook.otf</string>
+    <string>AvenirLTProHeavy.otf</string>
+    <string>AvenirLTProLight.otf</string>
+    <string>AvenirLTProMedium.otf</string>
+    <string>AvenirLTProRoman.otf</string>
+  </array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
