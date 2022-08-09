@@ -12,10 +12,11 @@ import { useNavigation } from '@react-navigation/native';
 import LeftArrow from '../../assets/Images/SVG/LeftArrow';
 import Colors from '../Colors';
 import FontFamily from '../FontFamily';
+import Addplus from '../../assets/Images/SVG/Addplus';
 
 
 
-const HeaderDy = ({ isBack, Headertitle, istitle, titlestyle, iconstylestyles }) => {
+const HeaderDy = ({ isBack, Headertitle, istitle, titlestyle, iconstylestyles, isplusicon, onadd }) => {
     const navigation = useNavigation();
     const __onLeftPress = () => {
         if (isBack) {
@@ -41,6 +42,11 @@ const HeaderDy = ({ isBack, Headertitle, istitle, titlestyle, iconstylestyles })
             {istitle && (
                 <Text style={[styles.headerText, titlestyle]}>{Headertitle}</Text>
             )}
+            {isplusicon && (
+                <TouchableOpacity style={{ right: 20 }} onPress={onadd}>
+                    <Addplus />
+                </TouchableOpacity>
+            )}
 
 
         </View>
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
     headerText: {
         fontSize: 20,
         fontFamily: FontFamily.bold,
-        color: Colors.lightblack,
+        color: Colors.gray,
         textAlign: 'center',
         flex: 1,
         right: 10,

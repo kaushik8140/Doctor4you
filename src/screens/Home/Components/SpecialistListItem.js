@@ -10,13 +10,13 @@ const SpecialistListItem = ({ item, index, style }) => {
     const navigation = useNavigation();
 
     return (
-        <View style={[styles.container, { ...style }]}>
+        <TouchableOpacity style={[styles.container, { ...style }]} onPress={() => navigation.navigate('CardioSpecialist')}>
             <View style={{ alignSelf: "center", paddingTop: 10 }}>{item.icon}</View>
 
             <Text style={styles.title}>{item.name}</Text>
 
             <Text style={styles.range}>{item.number}</Text>
-        </View>
+        </TouchableOpacity>
     );
 };
 

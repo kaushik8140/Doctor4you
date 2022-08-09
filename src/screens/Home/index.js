@@ -85,21 +85,16 @@ const Home = ({ navigation }) => {
             <ScrollView style={styles.bodyContainer}>
 
                 <View>
-                    <LinearGradient colors={["#EBF7F7", "#C6E4E4"]} style={{
-                        borderBottomLeftRadius: 20,
-                        borderBottomRightRadius: 20,
-                        height: 152
-                    }}>
-                        <View style={{ flexDirection: "row", paddingTop: 40, paddingLeft: 30 }}>
+                    <LinearGradient colors={["#EBF7F7", "#C6E4E4"]} style={styles.linearview}>
+                        <View style={styles.topview}>
                             <DefaultImage />
-                            <View style={{ flexDirection: "column", paddingLeft: 20, flex: 1 }}>
-                                <Text style={{ fontSize: 20, fontFamily: FontFamily.bold, color: Colors.primary }}>John Doe</Text>
-                                <Text style={{ fontSize: 14, fontFamily: FontFamily.light, color: Colors.gray }}>Find your suitable doctor here</Text>
+                            <View style={styles.subview}>
+                                <Text style={styles.toptext}>John Doe</Text>
+                                <Text style={styles.subtext}>Find your suitable doctor here</Text>
                             </View>
-                            <TouchableOpacity style={{ paddingRight: 28, alignSelf: "center" }}>
+                            <TouchableOpacity style={styles.touchview} onPress={() => navigation.navigate("Notification")}>
                                 <Notification />
                             </TouchableOpacity>
-
                         </View>
                     </LinearGradient>
 
@@ -109,17 +104,12 @@ const Home = ({ navigation }) => {
                         textSearch={textSearch}
                         settextSearch={settextSearch}
                         placeholdertext={'Search doctor, catagories, topic . . .'}
-                        style={{
-                            backgroundColor: Colors.offwhite,
-                            marginHorizontal: 10,
-                            marginVertical: 10,
-                            marginTop: -32,
-                        }}
+                        style={styles.searchview}
                     />
                     <SpecialistList key={'SpeedMeter'} data={Specialist} title={'Specialist'} />
                     <Text style={styles.title}>{"Get Care"}</Text>
                     <ButtonDy
-                        // onPress={handleSubmit}
+                        onPress={() => navigation.navigate("Patientdetails")}
                         title={'Request a Doctors Appointment'}
                         style={styles.button}
                         textStyle={styles.buttontext}

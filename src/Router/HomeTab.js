@@ -24,6 +24,7 @@ import FocusTopDoctors from '../assets/Images/SVG/FocusTopDoctors';
 import FocusDocument from '../assets/Images/SVG/FocusDocument';
 import FocusSearch from '../assets/Images/SVG/FocusSearch';
 import FocusSetting from '../assets/Images/SVG/FocusSetting';
+import { Platform } from 'react-native';
 
 
 const Tab = createBottomTabNavigator();
@@ -36,6 +37,7 @@ const HomeTab = () => {
                 tabBarStyle: {
                     // borderTopLeftRadius: 24,
                     // borderTopRightRadius: 24,
+                    height: Platform.OS === 'ios' ? 70 : 70,
                     backgroundColor: Colors.white,
                     overflow: 'hidden',
                 },

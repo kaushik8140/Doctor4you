@@ -1,44 +1,3 @@
-// import React from 'react'
-// import { View, Text } from 'react-native'
-// import ButtonDy from '../../common/Components/ButtonDy'
-// import TextField from '../../common/Components/TextField'
-// import EMAIL_ICON from '../../assets/Images/Temp/email.png';
-// import styles from './style'
-
-// const Login = () => {
-//   const [number, onChangeNumber] = React.useState(null);
-//   return (
-//     <View>
-//       <Text style={styles.textstyle}>Login</Text>
-//       <ButtonDy
-//         // onPress={handleSubmit}
-//         title={'Contact Doctor'}
-//         style={styles.button}
-//         textStyle={styles.buttontext}
-//       // processing={signinProcess}
-//       />
-
-//       <TextField
-//         onChangeText={onChangeNumber}
-//         // onBlur={handleBlur('email')}
-//         value={number}
-//         placeholder={'Email'}
-//         keyboardType={"email-address"}
-//         autoCapitalize="none"
-//         iconPath={EMAIL_ICON}
-//         returnKeyType={"next"}
-//         isPassword
-//         isvisible
-//       // onSubmitEditing={() => passwordRef.current.focus()}
-//       />
-//     </View>
-//   )
-// }
-
-// export default Login
-
-
-
 import {
   Text,
   View,
@@ -64,6 +23,9 @@ import { LoginSchema } from '../../utils/validationSchema';
 import ErrorTextDY from '../../common/Components/ErrorTextDY';
 // import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import Horizontalline from './Components/Horizontalline';
+import Google from '../../assets/Images/SVG/Google';
+import Facebook from '../../assets/Images/SVG/Facebook';
 
 
 const Login = ({ navigation }) => {
@@ -153,6 +115,14 @@ const Login = ({ navigation }) => {
                     // processing={signinProcess}
                     />
 
+                    <Horizontalline />
+                    <View style={styles.googleview}>
+                      <Google />
+                      <View width={30} />
+                      <Facebook />
+                    </View>
+                    <View height={20} />
+
                     <Text style={styles.dontHaveText}>
                       {'Don’t have an account?'}
                       {`  `}
@@ -167,6 +137,7 @@ const Login = ({ navigation }) => {
                 )}
               </Formik>
             </View>
+
           </ScrollView>
         </ImageBackground>
       </KeyboardAwareView>

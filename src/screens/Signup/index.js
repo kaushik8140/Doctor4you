@@ -25,6 +25,9 @@ import { SignupSchema } from '../../utils/validationSchema';
 import ErrorTextDY from '../../common/Components/ErrorTextDY';
 // import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import Horizontalline from '../Login/Components/Horizontalline';
+import Google from '../../assets/Images/SVG/Google';
+import Facebook from '../../assets/Images/SVG/Facebook';
 
 
 const Signup = ({ navigation }) => {
@@ -150,6 +153,14 @@ const Signup = ({ navigation }) => {
                                             textStyle={styles.buttontext}
                                             processing={signinProcess}
                                         />
+
+                                        <Horizontalline />
+                                        <View style={styles.googleview}>
+                                            <Google />
+                                            <View width={30} />
+                                            <Facebook />
+                                        </View>
+                                        <View height={20} />
 
                                         <Text style={styles.dontHaveText}>
                                             {'Already have an account?'}

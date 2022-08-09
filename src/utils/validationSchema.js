@@ -50,3 +50,40 @@ export const ResetPasswordSchema = Yup.object().shape({
             ),
         }),
 });
+
+export const HelpSchema = Yup.object().shape({
+    message: Yup.string()
+        .required('Required message')
+        .min(2, 'Short!')
+        .label('message'),
+});
+
+
+export const editProfileSchema = Yup.object().shape({
+    name: Yup.string()
+        .required('Required name')
+        .min(2, 'Short!')
+        .label('name'),
+    phone: Yup.string()
+        .required('Required phone!')
+        .matches(phoneRegExp, 'Phone number is not valid'),
+    email: Yup.string().email().required('Required email!').label('Email'),
+    address: Yup.string()
+        .required('Required address')
+        .min(2, 'Short!')
+        .label('address'),
+});
+
+export const PatientProfileSchema = Yup.object().shape({
+    name: Yup.string()
+        .required('Required name')
+        .min(2, 'Short!')
+        .label('name'),
+    phone: Yup.string()
+        .required('Required phone!')
+        .matches(phoneRegExp, 'Phone number is not valid'),
+    symptoms: Yup.string()
+        .required('Required symptoms')
+        .min(2, 'Short!')
+        .label('symptoms'),
+});

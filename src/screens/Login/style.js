@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     button: {
         marginTop: 20,
-        marginBottom: 50,
+        marginBottom: 30,
         width: '100%',
     },
     buttontext: {
@@ -64,6 +64,11 @@ const styles = StyleSheet.create({
         color: Colors.primary,
         fontFamily: FontFamily.semiBold
     },
+    googleview: {
+        flexDirection: "row",
+        alignSelf: "center",
+        marginTop: 10
+    }
 });
 
 export default styles;

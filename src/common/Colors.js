@@ -25,6 +25,8 @@ const colors = {
     backgroundGray: '#EBEBEB',
     transparent: 'transparent',
     textfieldgray: '#F0F0F0',
-    orange: '#F88920'
+    orange: '#F88920',
+    lightred:'#F21D52',
+    orgray:'#DDDADA',
 };
 export default colors;

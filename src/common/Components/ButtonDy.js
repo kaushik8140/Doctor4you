@@ -3,12 +3,13 @@ import {
     StyleSheet,
     TouchableOpacity,
     ActivityIndicator,
-    Text,
+    Text, View
 } from 'react-native';
 import Colors from '../Colors';
 import FontFamily from '../FontFamily';
+import { LogOut } from '../../assets/Images/SVG/ProfileIcon';
 
-const ButtonDy = ({ title, style, textStyle, onPress, processing, ...props }) => {
+const ButtonDy = ({ title, style, textStyle, onPress, processing, islogout, ...props }) => {
     return (
         <TouchableOpacity
             style={[styles.button, { borderColor: Colors.primary }, style]}
@@ -16,7 +17,12 @@ const ButtonDy = ({ title, style, textStyle, onPress, processing, ...props }) =>
             {processing ? (
                 <ActivityIndicator style={styles.processing} color={Colors.white} />
             ) : (
-                <Text style={[styles.title, textStyle]}>{title}</Text>
+                <View style={{ flexDirection: 'row' }}>
+                    {islogout && <LogOut />}
+
+                    <Text style={[styles.title, textStyle]}>{title}</Text>
+                </View>
+
             )}
         </TouchableOpacity>
     );

@@ -6,9 +6,13 @@ import {
 import Eyeoff from '../../assets/Images/SVG/Eyeoff';
 import Eyeopen from '../../assets/Images/SVG/Eyeopen';
 import { CountryPicker } from "react-native-country-codes-picker";
+import DateTimePickerModal from "react-native-modal-datetime-picker";
+import Moment from 'moment';
 
 import Colors from "../../common/Colors";
 import FontFamily from '../FontFamily';
+import GenderDropmodel from '../../screens/EditProfile/Components/GenderDropmodel';
+import GenderDropDown from '../../screens/EditProfile/Components/GenderDropDown';
 
 
 const TextField = ({
@@ -17,6 +21,8 @@ const TextField = ({
     editable = true, iconPath, mainplaceholder,
     placeholder,
     isvisible,
+    genderValue,
+    datepickerValue,
     ...props
 }, ref) => {
 
@@ -60,12 +66,56 @@ const TextField = ({
             // </View>
         );
     }
+
+
+
+    const FILTER_ITEMS = [
+        { label: "MALE" },
+        { label: "FEMALE" },
+        { label: "OTHER" },
+    ];
     const [show, setShow] = useState(false);
     const [countryCode, setCountryCode] = useState('');
     const [passvisible, setPassvisible] = useState(false);
+    const [isDropOpen, setisDropOpen] = useState(false);
+    const [filterValue, setfilterValue] = useState(undefined);
+    const [calanderModalOpen, setcalanderModalOpen] = useState(false);
+    const __onSelectItem = (index) => {
+        setfilterValue(index);
+        setisDropOpen(false);
+    }
     const onIconPress = () => {
         setPassvisible(!passvisible);
     };
+
+
+
+
+    // date picker right side
+    const __dateInputPicker = () => {
+        return (
+            <TouchableOpacity
+                style={styles.titleInputContainer}
+                onPress={() => setcalanderModalOpen(true)}
+            >
+                {/* date value */}
+                <Text style={[styles.titleInput, styles.title, {
+                    flex: 1
+                }]}>12 September, 1999</Text>
+                {/* {Moment(value).format("DD MMM YY")} */}
+
+                {/* calender date picker */}
+                <DateTimePickerModal
+                    isVisible={calanderModalOpen}
+                    mode="date"
+                    onConfirm={changeValue}
+                    onCancel={() => setcalanderModalOpen(false)}
+                />
+            </TouchableOpacity>
+        )
+    }
+
+
     return (
         <View
             style={[styles.container, {
@@ -97,6 +147,17 @@ const TextField = ({
 
             <View style={{ flexDirection: "row" }}>
                 {!!phoneValue && __inputLeftText()}
+                {genderValue &&
+                    <GenderDropDown
+                        onPress={() => setisDropOpen(true)}
+                        data={FILTER_ITEMS}
+                        selectedIndex={filterValue}
+                        defaultvalue={"Male"}
+                    />
+                }
+                {datepickerValue &&
+                    __dateInputPicker()
+                }
                 <TextInput
                     ref={ref}
                     style={[styles.titleInput, {
@@ -116,6 +177,15 @@ const TextField = ({
                     </TouchableOpacity>
                 )}
             </View>
+
+            {/* drop down modal for selection */}
+            <GenderDropmodel
+                visible={isDropOpen}
+                data={FILTER_ITEMS}
+                selectedIndex={filterValue}
+                onSelect={(index) => __onSelectItem(index)}
+                onClose={() => setisDropOpen(false)}
+            />
         </View>
     )
 }
