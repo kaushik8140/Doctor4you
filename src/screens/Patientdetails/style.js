@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     },
     continueButton: {
         marginTop: 100,
-        bottom: 10,
+        bottom: 50,
     },
     buttontext: {
         fontFamily: FontFamily.bold,

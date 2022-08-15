@@ -115,7 +115,7 @@ const Home = ({ navigation }) => {
                         textStyle={styles.buttontext}
                     />
                     <CardioIssuelist key={'SpeedMeter'} data={CardioIssues} />
-                    <TopDoctorList key={'SpeedMeter'} data={TopDoctorlist} title={'Top doctors'} />
+                    <TopDoctorList key={'SpeedMeter'} data={TopDoctorlist} title={'Top doctors'} morePress={() => navigation.navigate("TopDoctors")} />
                 </View>
 
             </ScrollView>

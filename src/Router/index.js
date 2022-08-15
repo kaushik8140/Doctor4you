@@ -17,6 +17,18 @@ import Help from '../screens/Help';
 import Notification from '../screens/Notification';
 import CardioSpecialist from '../screens/CardioSpecialist';
 import Patientdetails from '../screens/Patientdetails';
+import Patientdetails2 from '../screens/Patientdetails2';
+import Patientdetails3 from '../screens/Patientdetails3';
+import Patientdetails4 from '../screens/Patientdetails4';
+import DoctorDetails from '../screens/DoctorDetails';
+import BookAppointment from '../screens/BookAppointment';
+import Payment from '../screens/Payment';
+import ContactDoctor from '../screens/ContactDoctor';
+import Videocall from '../screens/Videocall';
+import ChatScreen from '../screens/ChatScreen';
+import AppointmentEnded from '../screens/AppointmentEnded';
+import Writereview from '../screens/Writereview';
+import Onlineappointments from '../screens/Onlineappointments';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,7 +60,18 @@ const Router = () => {
                 <Stack.Screen name="Notification" component={Notification} />
                 <Stack.Screen name="CardioSpecialist" component={CardioSpecialist} />
                 <Stack.Screen name="Patientdetails" component={Patientdetails} />
-
+                <Stack.Screen name="Patientdetails2" component={Patientdetails2} />
+                <Stack.Screen name="Patientdetails3" component={Patientdetails3} />
+                <Stack.Screen name="Patientdetails4" component={Patientdetails4} />
+                <Stack.Screen name="DoctorDetails" component={DoctorDetails} />
+                <Stack.Screen name="BookAppointment" component={BookAppointment} />
+                <Stack.Screen name="Payment" component={Payment} />
+                <Stack.Screen name="ContactDoctor" component={ContactDoctor} />
+                <Stack.Screen name="Videocall" component={Videocall} />
+                <Stack.Screen name="ChatScreen" component={ChatScreen} />
+                <Stack.Screen name="AppointmentEnded" component={AppointmentEnded} />
+                <Stack.Screen name="Writereview" component={Writereview} />
+                <Stack.Screen name="Onlineappointments" component={Onlineappointments} />
 
             </Stack.Navigator>
         </NavigationContainer>

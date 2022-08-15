@@ -108,25 +108,35 @@ import Colors from '../../common/Colors'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const Onboarding = () => {
-    const data = [TEMP_ITEM_0, TEMP_ITEM_1, TEMP_ITEM_2]
-    // const data = [
-    //     {
-    //         id: 0,
-    //         image: TEMP_ITEM_0,
-    //     },
-    //     {
-    //         id: 1,
-    //         image: TEMP_ITEM_0,
-    //     }
-    // ]
+    // const data = [TEMP_ITEM_0, TEMP_ITEM_1, TEMP_ITEM_2]
+    const data = [
+        {
+            id: 0,
+            image: TEMP_ITEM_0,
+            title: "Thousands of doctors",
+            description: "Access thousands of Doctors instantly.You can easily contact with the doctors and contact for your needs."
+        },
+        {
+            id: 1,
+            image: TEMP_ITEM_1,
+            title: "Live talk with doctor",
+            description: "Easily connect with doctor and start video chat for your better treatment & Prescription."
+        },
+        {
+            id: 2,
+            image: TEMP_ITEM_2,
+            title: "Chat with doctors",
+            description: "Book an appointment with doctor. Chat with doctor via appointment letter.Get consultent."
+        }
+    ]
 
     return (
         <View>
             <ImageSlider
                 data={data}
-                onImagePress={(index) => setselectedImage(index)}
+            // onImagePress={(index) => setselectedImage(index)}
             />
-            <View style={{height:windowHeight, width: windowWidth, backgroundColor: Colors.subgray,  borderTopLeftRadius: 30, borderTopRightRadius: 30,top:-20}}>
+            <View style={{ height: windowHeight, width: windowWidth, backgroundColor: Colors.subgray, borderTopLeftRadius: 30, borderTopRightRadius: 30, top: -20 }}>
 
             </View>
 

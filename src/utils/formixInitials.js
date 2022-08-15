@@ -35,3 +35,20 @@ export const PatientdetailsValues = {
     phone: '',
     symptoms: '',
 };
+
+export const Patientdetails4Values = {
+    Chloroquine: '',
+    location: '',
+};
+
+
+export const CarddetailsValues = {
+    name: '',
+    cardnumber: '',
+    expiredate: '',
+    cvv: '',
+};
+
+export const ReviewValues = {
+    message: '',
+};

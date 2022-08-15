@@ -87,3 +87,40 @@ export const PatientProfileSchema = Yup.object().shape({
         .min(2, 'Short!')
         .label('symptoms'),
 });
+
+export const PatientProfile4Schema = Yup.object().shape({
+    Chloroquine: Yup.string()
+        .required('Required Chloroquine')
+        .min(2, 'Short!')
+        .label('Chloroquine'),
+    location: Yup.string()
+        .required('Required location')
+        .min(2, 'Short!')
+        .label('location'),
+});
+
+export const CarddetailsSchema = Yup.object().shape({
+    name: Yup.string()
+        .required('Required name')
+        .min(2, 'Short!')
+        .label('name'),
+    cardnumber: Yup.string()
+        .required('Required cardnumber')
+        .min(2, 'Short!')
+        .label('cardnumber'),
+    expiredate: Yup.string()
+        .required('Required expiredate')
+        .min(2, 'Short!')
+        .label('expiredate'),
+    cvv: Yup.string()
+        .required('Required cvv')
+        .min(2, 'Short!')
+        .label('cvv'),
+});
+
+export const ReviewSchema = Yup.object().shape({
+    message: Yup.string()
+        .required('Required message')
+        .min(2, 'Short!')
+        .label('message'),
+});

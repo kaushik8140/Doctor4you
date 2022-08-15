@@ -16,10 +16,14 @@ import CALENDER_ICON from '../../assets/Images/Temp/calender.png';
 import { PatientdetailsValues } from '../../utils/formixInitials';
 import { PatientProfileSchema } from '../../utils/validationSchema';
 import TextInputHelp from '../Help/Components/TextInputHelp';
+import PropertyOptions from '../../common/Components/PropertyOptions';
+import BouncyCheckbox from "react-native-bouncy-checkbox";
 
 const Patientdetails = ({ navigation }) => {
-
-
+    const Beds = ["10+", "20+", "30+", "40+"];
+    const [selectedBedsIndex, setselectedBedsIndex] = useState(0);
+    const [checkboxState, setCheckboxState] = React.useState(false);
+    const [checkbox1State, setCheckbox1State] = React.useState(false);
     return (
         <SafeAreaView style={styles.container}>
             {/* header Ip */}
@@ -65,6 +69,15 @@ const Patientdetails = ({ navigation }) => {
                                 {/* placeholder name */}
                                 <Text style={styles.placeholderText}>Select your age range or type </Text>
                             </View>
+                            <PropertyOptions
+                                data={Beds}
+                                extraHorizontalPadding={15}
+                                selectedAgeIndex={selectedBedsIndex}
+                                onSelect={(index) => setselectedBedsIndex(index)}
+                                isWrap
+                                activeTextStyle={{ color: Colors.white }}
+                                inactiveTextStyle={{ color: Colors.gray }}
+                            />
 
 
                             {/* password validation parts */}
@@ -86,6 +99,45 @@ const Patientdetails = ({ navigation }) => {
                                 render={msg => <ErrorTextDY title={msg} />}
                                 name="phone"
                             />
+                            <View height={20} />
+
+
+                            <View style={styles.topContainer}>
+                                <Image
+                                    source={CALENDER_ICON}
+                                    style={styles.icon}
+                                    resizeMode="contain"
+                                />
+
+                                {/* placeholder name */}
+                                <Text style={styles.placeholderText}>Gender</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <BouncyCheckbox
+                                    style={{ marginTop: 16 }}
+                                    unfillColor={Colors.white}
+                                    fillColor={Colors.primary}
+                                    // ref={(ref: any) => (bouncyCheckboxRef = ref)}
+                                    isChecked={checkboxState}
+                                    text="Male"
+                                    disableBuiltInState
+                                    textStyle={{ textDecorationLine: "none" }}
+                                    onPress={() => { setCheckboxState(!checkboxState), setCheckbox1State(false) }}
+                                />
+                                <View width={10} />
+                                <BouncyCheckbox
+                                    style={{ marginTop: 16 }}
+                                    unfillColor={Colors.white}
+                                    fillColor={Colors.primary}
+                                    // ref={(ref: any) => (bouncyCheckboxRef = ref)}
+                                    isChecked={checkbox1State}
+                                    text="Female"
+                                    disableBuiltInState
+                                    textStyle={{ textDecorationLine: "none" }}
+                                    onPress={() => { setCheckbox1State(!checkbox1State), setCheckboxState(false) }}
+                                />
+                            </View>
+
                             <Text style={styles.maintext}>Please describe your symptoms </Text>
                             <TextInputHelp
                                 onChangeText={handleChange('symptoms')}
@@ -103,17 +155,12 @@ const Patientdetails = ({ navigation }) => {
                             <ErrorMessage render={msg => <ErrorTextDY title={msg} />} name="symptoms" />
 
                             <ButtonDy
-                                onPress={() => navigation.navigate("HomeTab")}
-                                title={'Sign In'}
+                                onPress={() => navigation.navigate("Patientdetails2")}
+                                title={'Next 1/4'}
                                 style={styles.continueButton}
                                 textStyle={styles.buttontext}
                             // processing={signinProcess}
                             />
-
-
-
-
-
                         </>
                     )}
                 </Formik>

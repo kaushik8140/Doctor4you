@@ -10,7 +10,7 @@ const CardioSpecialistListItem = ({ item, index, style }) => {
     const navigation = useNavigation();
 
     return (
-        <View style={[styles.container, { ...style }]}>
+        <TouchableOpacity style={[styles.container, { ...style }]} onPress={() => navigation.navigate("DoctorDetails")}>
             <View style={{ alignSelf: "center" }}>{item.icon}</View>
 
             <View style={{ flex: 1, paddingLeft: 10, alignSelf: "center" }}>
@@ -19,7 +19,7 @@ const CardioSpecialistListItem = ({ item, index, style }) => {
                 <Text style={styles.range}>{item.number}</Text>
                 <Text style={styles.rating}>{item.rating}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 

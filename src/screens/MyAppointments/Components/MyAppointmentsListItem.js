@@ -10,7 +10,7 @@ const MyAppointmentsListItem = ({ item, index, style }) => {
     const navigation = useNavigation();
 
     return (
-        <View style={[styles.container, { ...style }]}>
+        <TouchableOpacity style={[styles.container, { ...style }]} onPress={() => navigation.navigate("Onlineappointments")}>
             <View style={{ alignSelf: "center" }}>{item.icon}</View>
             <View style={{ position: "absolute", bottom: 0, left: 70, }}>
                 {item.image}
@@ -28,7 +28,7 @@ const MyAppointmentsListItem = ({ item, index, style }) => {
                 <Text style={styles.title}>{item.name}</Text>
                 <Text style={styles.rating}>{item.time}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 

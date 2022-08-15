@@ -1,5 +1,3 @@
-
-
 import React, { memo, useState } from 'react';
 import {
     StyleSheet,
@@ -13,10 +11,10 @@ import LeftArrow from '../../assets/Images/SVG/LeftArrow';
 import Colors from '../Colors';
 import FontFamily from '../FontFamily';
 import Addplus from '../../assets/Images/SVG/Addplus';
+import HeaderVideocall from '../../assets/Images/SVG/HeaderVideocall';
+import HeadrVoicecall from '../../assets/Images/SVG/HeadrVoicecall';
 
-
-
-const HeaderDy = ({ isBack, Headertitle, istitle, titlestyle, iconstylestyles, isplusicon, onadd }) => {
+const HeaderDy = ({ isBack, Headertitle, istitle, titlestyle, iconstylestyles, isplusicon, onadd, ischaticon }) => {
     const navigation = useNavigation();
     const __onLeftPress = () => {
         if (isBack) {
@@ -48,6 +46,19 @@ const HeaderDy = ({ isBack, Headertitle, istitle, titlestyle, iconstylestyles, i
                 </TouchableOpacity>
             )}
 
+            {
+                ischaticon &&
+                <>
+                    <TouchableOpacity onPress={() => navigation.navigate("ContactDoctor")}>
+                        <HeadrVoicecall />
+                    </TouchableOpacity>
+                    <View width={5} />
+                    <TouchableOpacity onPress={() => navigation.navigate("Videocall")}>
+                        <HeaderVideocall />
+                    </TouchableOpacity>
+                    <View width={10} />
+                </>
+            }
 
         </View>
     );
