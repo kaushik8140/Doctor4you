@@ -52,7 +52,7 @@ const OTPScreen = ({ navigation }) => {
                 />
 
                 {/* Resend Code Text */}
-                <Text style={styles.subtextgray}>
+                <Text style={styles.bottomtext}>
                     {'Code send in 0:29'}
                     {`  `}
                     <Text style={styles.mobiletext}>{'Resend code'}</Text>

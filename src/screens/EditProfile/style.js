@@ -20,6 +20,12 @@ const styles = StyleSheet.create({
         fontFamily: FontFamily.bold,
         fontSize: 16,
     },
+    iconview: {
+        position: "absolute",
+        right: -15,
+        alignSelf: "center",
+    }
+
 });
 
 export default styles;

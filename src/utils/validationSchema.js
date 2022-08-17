@@ -124,3 +124,10 @@ export const ReviewSchema = Yup.object().shape({
         .min(2, 'Short!')
         .label('message'),
 });
+
+export const setProfileSchema = Yup.object().shape({
+    address: Yup.string()
+        .required('Required address')
+        .min(2, 'Short!')
+        .label('address'),
+});

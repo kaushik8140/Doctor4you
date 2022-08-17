@@ -1,18 +1,18 @@
-import React, { memo, forwardRef, useState } from 'react';
+import React, { memo, forwardRef, useState, useRef } from 'react';
 import {
     StyleSheet, TextInput, View,
     Image, Platform, Text, TouchableOpacity
 } from 'react-native';
 import Eyeoff from '../../assets/Images/SVG/Eyeoff';
 import Eyeopen from '../../assets/Images/SVG/Eyeopen';
-import { CountryPicker } from "react-native-country-codes-picker";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import Moment from 'moment';
-
+import CountryPicker, { DARK_THEME, FlagButton } from 'react-native-country-picker-modal'
 import Colors from "../../common/Colors";
 import FontFamily from '../FontFamily';
 import GenderDropmodel from '../../screens/EditProfile/Components/GenderDropmodel';
 import GenderDropDown from '../../screens/EditProfile/Components/GenderDropDown';
+import ButtonDy from './ButtonDy';
 
 
 const TextField = ({
@@ -26,57 +26,16 @@ const TextField = ({
     ...props
 }, ref) => {
 
-    // component for left side number
-    const __inputLeftText = () => {
-        return (
-            <View style={styles.phoneContainer}>
-                <Text
-                    style={styles.phoneText}
-                >
-                    {phoneValue}
-                </Text>
-            </View>
-            // <View style={styles.container}>
-            //     <TouchableOpacity
-            //         onPress={() => setShow(true)}
-            //         style={{
-            //             width: '80%',
-            //             height: 60,
-            //             backgroundColor: 'black',
-            //             padding: 10,
-            //         }}
-            //     >
-            //         <Text style={{
-            //             color: 'white',
-            //             fontSize: 20
-            //         }}>
-            //             {countryCode}
-            //         </Text>
-            //     </TouchableOpacity>
-
-            // // For showing picker just put show state to show prop
-            //     <CountryPicker
-            //         show={show}
-            //         // when picker button press you will get the country object with dial code
-            //         pickerButtonOnPress={(item) => {
-            //             setCountryCode(item.dial_code);
-            //             setShow(false);
-            //         }}
-            //     />
-            // </View>
-        );
-    }
-
-
-
     const FILTER_ITEMS = [
         { label: "MALE" },
         { label: "FEMALE" },
         { label: "OTHER" },
     ];
-    const [show, setShow] = useState(false);
-    const [countryCode, setCountryCode] = useState('');
+    const countryDataRef = useRef(null);
+
+    const [country, setCountry] = useState("91")
     const [passvisible, setPassvisible] = useState(false);
+    const [countryvisible, setCountryVisible] = useState(false);
     const [isDropOpen, setisDropOpen] = useState(false);
     const [filterValue, setfilterValue] = useState(undefined);
     const [calanderModalOpen, setcalanderModalOpen] = useState(false);
@@ -88,8 +47,40 @@ const TextField = ({
         setPassvisible(!passvisible);
     };
 
+    const onSelect = (country) => {
+        setCountry(country.callingCode[0])
+    }
 
 
+    const _renderflagbutton = () => {
+        return (
+            <TouchableOpacity style={styles.phoneContainer} onPress={() => setCountryVisible(!countryvisible)}>
+                {/* <Text style={styles.phoneText}>{`+${country}` || `${phoneValue}`}</Text> */}
+                <Text style={styles.phoneText}>+{country}</Text>
+            </TouchableOpacity>
+
+        );
+    }
+
+
+    // component for left side number
+    const __inputLeftText = () => {
+        return (
+            <CountryPicker
+                ref={countryDataRef}
+                theme={DARK_THEME}
+                withCallingCode
+                withFilter
+                renderFlagButton={_renderflagbutton}
+                {...{
+                    onSelect,
+                }}
+                visible={countryvisible}
+            />
+
+
+        );
+    }
 
     // date picker right side
     const __dateInputPicker = () => {
@@ -224,7 +215,7 @@ const styles = StyleSheet.create({
         textAlign: "right",
     },
     phoneContainer: {
-        paddingRight: 10,
+        // paddingRight: 10,
         // borderRightWidth: 1,
         marginRight: 10,
         alignSelf: "center"

@@ -12,8 +12,6 @@ import PhoneFill from '../../assets/Images/SVG/PhoneFill'
 
 
 
-
-
 const ContactDoctor = ({ navigation }) => {
 
     const windowWidth = Dimensions.get('window').width;

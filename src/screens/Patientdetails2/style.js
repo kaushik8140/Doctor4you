@@ -14,8 +14,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
     },
     continueButton: {
-        marginTop: 100,
-
+        marginTop: 220,
     },
     buttontext: {
         fontFamily: FontFamily.bold,
@@ -43,6 +42,30 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: FontFamily.semiBold
     },
+    textstyle: {
+        color: Colors.primary,
+        fontFamily: FontFamily.bold,
+        fontSize: 18
+    },
+    itemstyle: {
+        color: Colors.primary,
+        fontFamily: FontFamily.light,
+        fontSize: 16,
+    },
+    mainview: {
+        marginTop: 50,
+        color: Colors.primary,
+        alignSelf: "center",
+        fontSize: 16,
+        fontFamily: FontFamily.semiBold
+    },
+    borderview: {
+        marginTop: 20,
+        borderBottomColor: Colors.bordergray,
+        borderBottomWidth: 1,
+        marginBottom: 50
+    }
+
 });
 
 export default styles;

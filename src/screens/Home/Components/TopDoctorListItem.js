@@ -10,7 +10,7 @@ const TopDoctorListItem = ({ item, index, style }) => {
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity style={[styles.container, { ...style }]} onPress={() => navigation.navigate("DoctorDetails")}>
+        <TouchableOpacity style={[styles.container, { ...style }]} onPress={() => navigation.navigate("TopDoctors")}>
             <View style={{ alignSelf: "center", paddingTop: 10, borderRadius: 25, }}>{item.icon}</View>
 
             <Text style={styles.title}>{item.name}</Text>

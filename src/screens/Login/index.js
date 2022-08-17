@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   ScrollView,
   Dimensions,
+  Image
 } from 'react-native';
 import React, { useRef, useState } from 'react';
 import { SvgXml } from 'react-native-svg';
@@ -24,8 +25,8 @@ import ErrorTextDY from '../../common/Components/ErrorTextDY';
 // import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Horizontalline from './Components/Horizontalline';
-import Google from '../../assets/Images/SVG/Google';
 import Facebook from '../../assets/Images/SVG/Facebook';
+import GOOGLE_ICON from '../../assets/Images/Temp/Google_Icon.png'
 
 
 const Login = ({ navigation }) => {
@@ -117,7 +118,11 @@ const Login = ({ navigation }) => {
 
                     <Horizontalline />
                     <View style={styles.googleview}>
-                      <Google />
+                      <Image
+                        source={GOOGLE_ICON}
+                        style={{ height: 50, width: 50 }}
+                        resizeMode="contain"
+                      />
                       <View width={30} />
                       <Facebook />
                     </View>

@@ -29,6 +29,7 @@ import ChatScreen from '../screens/ChatScreen';
 import AppointmentEnded from '../screens/AppointmentEnded';
 import Writereview from '../screens/Writereview';
 import Onlineappointments from '../screens/Onlineappointments';
+import SetUpProfile from '../screens/SetUpProfile';
 
 const Stack = createNativeStackNavigator();
 
@@ -72,6 +73,7 @@ const Router = () => {
                 <Stack.Screen name="AppointmentEnded" component={AppointmentEnded} />
                 <Stack.Screen name="Writereview" component={Writereview} />
                 <Stack.Screen name="Onlineappointments" component={Onlineappointments} />
+                <Stack.Screen name="SetUpProfile" component={SetUpProfile} />
 
             </Stack.Navigator>
         </NavigationContainer>

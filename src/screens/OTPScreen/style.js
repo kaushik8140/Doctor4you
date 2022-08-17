@@ -22,9 +22,8 @@ const styles = StyleSheet.create({
     },
     subtextgray: {
         fontFamily: FontFamily.primary,
-        fontSize: 13,
+        fontSize: 16,
         color: Colors.gray,
-        alignSelf: 'center',
         paddingTop: 20,
     },
     bottomtext: {
@@ -79,5 +78,12 @@ const styles = StyleSheet.create({
         fontFamily: FontFamily.bold,
         fontSize: 16,
     },
+    bottomtext:{
+        fontFamily: FontFamily.primary,
+        fontSize: 13,
+        color: Colors.gray,
+        paddingTop: 20,
+        alignSelf:"center"
+    }
 });
 export default styles;

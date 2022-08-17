@@ -57,6 +57,7 @@ const Forgotpassword = ({ navigation }) => {
                                 <ButtonDy
                                     onPress={() => navigation.navigate('OTPScreen')}
                                     style={styles.continueButton}
+                                    textStyle={styles.buttontext}
                                     title={'Send OTP'}
                                 />
                             </>

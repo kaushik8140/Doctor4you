@@ -71,6 +71,8 @@ const styles = StyleSheet.create({
     colpantext: {
         color: Colors.bordergray,
         fontSize: 14,
-        textAlign: "center"
+        // textAlign: "center",
+        paddingLeft: 8,
+        paddingRight: 10
     }
 });

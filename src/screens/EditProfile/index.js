@@ -36,7 +36,7 @@ const EditProfile = ({ navigation }) => {
                     alignSelf: "center",
                 }}>
                     <Editmain />
-                    <View style={{ position: "absolute", right: -15, alignSelf: "center", }}>
+                    <View style={styles.iconview}>
                         <CameraIcon />
                     </View>
 
@@ -129,7 +129,7 @@ const EditProfile = ({ navigation }) => {
                             <View height={20} />
 
                             <View height={10} />
-                            {/* Number validation parts */}
+                          
                             <TextField
                                 onChangeText={handleChange('address')}
                                 onBlur={handleBlur('address')}

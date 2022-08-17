@@ -8,9 +8,17 @@ const styles = StyleSheet.create({
         paddingVertical: 30,
         backgroundColor: Colors.white,
     },
-    scrollcontainer: {
+    scrollContainer: {
         paddingHorizontal: '3%',
         flexGrow: 1
+    },
+    continueButton: {
+        position: 'absolute',
+        bottom: 0,
+    },
+    buttontext: {
+        fontFamily: FontFamily.bold,
+        fontSize: 16,
     },
     forgotPasswordText: {
         color: Colors.primary,
@@ -28,14 +36,16 @@ const styles = StyleSheet.create({
         paddingTop: 15,
         marginHorizontal: "3%"
     },
-    continueButton: {
-        position: 'absolute',
-        bottom: 0,
+    iconview: {
+        position: "absolute",
+        right: -15,
+        alignSelf: "center",
     },
-    buttontext: {
-        fontFamily: FontFamily.bold,
-        fontSize: 16,
-    },
+    iconmainview:{
+        alignSelf: "center",
+        marginTop: 50
+    }
+
 });
 
 export default styles;

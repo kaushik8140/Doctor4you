@@ -5,6 +5,7 @@ import {
     SafeAreaView,
     ScrollView,
     Dimensions,
+    Image
 } from 'react-native';
 import React, { useRef, useState } from 'react';
 import { SvgXml } from 'react-native-svg';
@@ -26,8 +27,8 @@ import ErrorTextDY from '../../common/Components/ErrorTextDY';
 // import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Horizontalline from '../Login/Components/Horizontalline';
-import Google from '../../assets/Images/SVG/Google';
 import Facebook from '../../assets/Images/SVG/Facebook';
+import GOOGLE_ICON from '../../assets/Images/Temp/Google_Icon.png'
 
 
 const Signup = ({ navigation }) => {
@@ -147,7 +148,8 @@ const Signup = ({ navigation }) => {
 
 
                                         <ButtonDy
-                                            onPress={handleSubmit}
+                                            // onPress={handleSubmit}
+                                            onPress={() => navigation.navigate('SetUpProfile')}
                                             title={'Create account'}
                                             style={styles.button}
                                             textStyle={styles.buttontext}
@@ -156,7 +158,11 @@ const Signup = ({ navigation }) => {
 
                                         <Horizontalline />
                                         <View style={styles.googleview}>
-                                            <Google />
+                                            <Image
+                                                source={GOOGLE_ICON}
+                                                style={{ height: 50, width: 50 }}
+                                                resizeMode="contain"
+                                            />
                                             <View width={30} />
                                             <Facebook />
                                         </View>

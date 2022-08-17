@@ -52,3 +52,8 @@ export const CarddetailsValues = {
 export const ReviewValues = {
     message: '',
 };
+
+
+export const setProfileValues = {
+    address: '',
+};
