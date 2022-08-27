@@ -16,17 +16,18 @@ const styles = StyleSheet.create({
         color: Colors.primary,
         fontSize: 24,
         fontFamily: FontFamily.bold,
-        paddingLeft: 5,
-        paddingTop: 10,
+        // paddingLeft: 5,
+        paddingTop: 30,
         marginHorizontal: "3%"
     },
     sendingYouOTPText: {
         color: Colors.bordergray,
         fontSize: 16,
         fontFamily: FontFamily.primary,
-        paddingLeft: 5,
+        // paddingLeft: 5,
         paddingTop: 15,
-        marginHorizontal: "3%"
+        marginHorizontal: "3%",
+        lineHeight: 25
     },
     continueButton: {
         position: 'absolute',

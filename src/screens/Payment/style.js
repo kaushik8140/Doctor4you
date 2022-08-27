@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.backgroundGray,
     },
     bodyContainer: {
-        marginHorizontal: "3%",
+        marginHorizontal: "5%",
         flexGrow: 1
     },
     continueButton: {
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     image: {
         width: '100%',
         height: 212,
+        marginTop: 20
     }
 });
 

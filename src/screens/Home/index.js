@@ -28,12 +28,12 @@ const Home = ({ navigation }) => {
 
     const Specialist = [
         {
-            icon: <Heart />,
+            icon: <Cardio />,
             name: "Cardio\nSpecialist",
             number: "27 Doctors",
         },
         {
-            icon: <Cardio />,
+            icon: <Heart />,
             name: 'Heart\nIssue',
             number: "43 Doctors",
         },

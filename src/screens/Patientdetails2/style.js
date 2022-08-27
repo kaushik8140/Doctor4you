@@ -14,7 +14,9 @@ const styles = StyleSheet.create({
         flexGrow: 1,
     },
     continueButton: {
-        marginTop: 220,
+
+        marginTop: 250,
+        bottom: 100
     },
     buttontext: {
         fontFamily: FontFamily.bold,
@@ -26,7 +28,8 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: Colors.gray,
         alignSelf: "center",
-        textAlign: "center"
+        textAlign: "center",
+        lineHeight: 25
     },
     icon: {
         height: 16,

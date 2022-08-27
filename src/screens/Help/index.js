@@ -10,7 +10,7 @@ import { HelpSchema } from '../../utils/validationSchema';
 import TextInputHelp from './Components/TextInputHelp';
 import ErrorTextDY from '../../common/Components/ErrorTextDY';
 import ButtonDy from '../../common/Components/ButtonDy';
-
+import Colors from '../../common/Colors';
 
 const Help = ({ navigation }) => {
 
@@ -29,28 +29,28 @@ const Help = ({ navigation }) => {
                     {({ handleChange, handleBlur, handleSubmit, values }) => (
                         <>
 
-                           
-                                <TextInputHelp
-                                    onChangeText={handleChange('message')}
-                                    onBlur={handleBlur('message')}
-                                    value={values.message}
-                                    placeholder={'Type your message'}
-                                    returnKeyType={"next"}
-                                    inputStyle={{
-                                        height: 250,
-                                        textAlignVertical: 'top'
-                                    }}
-                                    multiline
-                                // onSubmitEditing={() => countryRef.current.focus()}
-                                />
-                                <ErrorMessage render={msg => <ErrorTextDY title={msg} />} name="message" />
-                                <Text style={styles.maintext}>Fill out the form above to send an email and one of our team members will address your question as soon as possible. </Text>
-                         
+
+                            <TextInputHelp
+                                onChangeText={handleChange('message')}
+                                onBlur={handleBlur('message')}
+                                value={values.message}
+                                placeholder={'Type your message'}
+                                returnKeyType={"next"}
+                                inputStyle={{
+                                    height: 250,
+                                    textAlignVertical: 'top'
+                                }}
+                                multiline
+                            // onSubmitEditing={() => countryRef.current.focus()}
+                            />
+                            <ErrorMessage render={msg => <ErrorTextDY title={msg} />} name="message" />
+                            <Text style={styles.maintext}>Fill out the form above to send an email and one of our team members will address your question as soon as possible. </Text>
+
 
                             {/* Add Address  button */}
                             <ButtonDy
                                 title={'Send mail'}
-                                style={styles.continueButton}
+                                style={[styles.continueButton, { backgroundColor: (values.message == "") ? Colors.bordergray : Colors.primary, borderColor: (values.message == "") ? Colors.bordergray : Colors.primary }]}
                                 textStyle={styles.buttontext}
                             />
 

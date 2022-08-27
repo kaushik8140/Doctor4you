@@ -221,23 +221,26 @@ const styles = StyleSheet.create({
         fontSize: 14,
         textAlign: "center",
         paddingVertical: 10,
-        paddingBottom: 20
+        paddingBottom: 20,
+        lineHeight: 20,
     },
     skiptext: {
         color: Colors.listgray,
         alignSelf: "center",
         fontFamily: FontFamily.semiBold,
         fontSize: 15,
-        paddingVertical: 20
+        paddingVertical: 20,
+        // paddingBottom:30,
     },
     bottomview: {
         position: "absolute",
-        height: 300,
+        height: 320,
         width: 300,
         backgroundColor: Colors.white,
-        top: windowHeight / 2.1,
+        top: windowHeight / 2,
         borderRadius: 30,
-        alignSelf: "center"
+        alignSelf: "center",
+        justifyContent: "center"
     },
     button: {
         marginTop: 20,

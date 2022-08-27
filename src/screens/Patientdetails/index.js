@@ -27,7 +27,7 @@ const Patientdetails = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             {/* header Ip */}
-            <HeaderDy isBack istitle Headertitle={"Patient’s details"} />
+            <HeaderDy isBack istitle Headertitle={"Patient’s details"} iconstylestyles={{ paddingLeft: 10 }} />
 
             <ScrollView style={styles.scrollContainer}>
 

@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.backgroundGray,
+
     },
     bodyContainer: {
         marginTop: 30,
@@ -29,12 +30,13 @@ const styles = StyleSheet.create({
     },
     drtext: {
         alignSelf: "center",
-        color: Colors.gray,
+        color: Colors.bordergray,
         marginTop: 30,
         fontSize: 24,
         textAlign: "center",
         paddingHorizontal: 20,
-        fontFamily: FontFamily.semiBold
+        fontFamily: FontFamily.semiBold,
+        lineHeight: 30
     },
     starview: {
         flexDirection: "row",
@@ -56,7 +58,17 @@ const styles = StyleSheet.create({
         color: Colors.bordergray,
         fontSize: 16,
         fontFamily: FontFamily.semiBold,
-    }
+    },
+    jandrtext: {
+        alignSelf: "center",
+        color: Colors.gray,
+        marginTop: 30,
+        fontSize: 24,
+        textAlign: "center",
+        paddingHorizontal: 20,
+        fontFamily: FontFamily.semiBold,
+        lineHeight: 30
+    },
 });
 
 export default styles;

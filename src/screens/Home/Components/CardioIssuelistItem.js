@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         top: 15,
         borderLeftWidth: 2,
-        borderLeftColor: Colors.primary
+        borderLeftColor: Colors.primary,
+        lineHeight: 18
     },
     title: {
         fontFamily: FontFamily.bold,
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         paddingTop: 5,
         textAlign: 'left',
+
     },
 
 });

@@ -17,14 +17,15 @@ const styles = StyleSheet.create({
         color: Colors.primary,
         fontSize: 24,
         fontFamily: FontFamily.bold,
-        paddingLeft: 5,
-        paddingTop: 10,
+        // paddingLeft: 5,
+        paddingTop: 30,
     },
     subtextgray: {
         fontFamily: FontFamily.primary,
         fontSize: 16,
         color: Colors.gray,
         paddingTop: 20,
+        lineHeight: 25
     },
     bottomtext: {
         fontFamily: FontFamily.primary,
@@ -78,12 +79,12 @@ const styles = StyleSheet.create({
         fontFamily: FontFamily.bold,
         fontSize: 16,
     },
-    bottomtext:{
+    bottomtext: {
         fontFamily: FontFamily.primary,
         fontSize: 13,
         color: Colors.gray,
         paddingTop: 20,
-        alignSelf:"center"
+        alignSelf: "center"
     }
 });
 export default styles;

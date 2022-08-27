@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
         color: Colors.bordergray,
         fontSize: 16,
         paddingTop: 5,
+        width:48
 
     },
     maincontainer: {
@@ -74,6 +75,12 @@ const styles = StyleSheet.create({
     },
     rowtext: {
         flexDirection: "row"
+    },
+    topdoctext:{
+        fontFamily: FontFamily.semiBold,
+        color: Colors.bordergray,
+        fontSize: 16,
+        paddingTop: 5,
     }
 
 });

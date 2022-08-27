@@ -27,6 +27,7 @@ const ChatScreen = ({ navigation }) => {
                 </View>
                 <View height={30} />
                 <View style={styles.rowview}>
+                    <View width={10} />
                     <Medamjone />
                     <View width={10} />
                     <View>
@@ -40,6 +41,7 @@ const ChatScreen = ({ navigation }) => {
                 </View>
                 <View height={30} />
                 <View style={styles.rowview}>
+                    <View width={10} />
                     <Medamjone />
                     <View width={10} />
                     <View>
@@ -50,6 +52,7 @@ const ChatScreen = ({ navigation }) => {
 
                 <View height={30} />
                 <View style={styles.Medamjoneview}>
+                    <View width={10} />
                     <Medamjone />
                     <View width={10} />
                     <Text style={styles.typetext}>Dr. Jane is typing . . .</Text>

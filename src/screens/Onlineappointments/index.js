@@ -33,7 +33,7 @@ const Onlineappointments = ({ navigation }) => {
                     <View style={styles.rileayText}>
                         <Text style={styles.title}>Dr. Tierra Riley</Text>
 
-                        <Text style={styles.range}>Cardiologist - Accra Medical
+                        <Text style={styles.topdoctext}>Cardiologist - Accra Medical
                             College Hospital</Text>
 
                     </View>
@@ -68,23 +68,23 @@ const Onlineappointments = ({ navigation }) => {
                         <Text style={styles.visittext}>Patient information</Text>
                         <View style={styles.rowtext}>
                             <Text style={styles.range}>Name</Text>
-                            <View width={5} />
+                            <View width={15} />
                             <Text style={styles.range}>: </Text>
-                            <View width={5} />
+                            <View style={{marginRight:-30}} />
                             <Text style={styles.patientInfo}>John Doe</Text>
                         </View>
                         <View style={styles.rowtext}>
                             <Text style={styles.range}>Age</Text>
-                            <View width={5} />
+                            <View width={15} />
                             <Text style={styles.range}>: </Text>
-                            <View width={5} />
+                            <View style={{marginRight:-30}} />
                             <Text style={styles.patientInfo}>23</Text>
                         </View>
                         <View style={styles.rowtext}>
                             <Text style={styles.range}>Phone</Text>
-                            <View width={5} />
+                            <View width={15} />
                             <Text style={styles.range}>: </Text>
-                            <View width={5} />
+                            <View style={{marginRight:-30}} />
                             <Text style={styles.patientInfo}>+91 12345 67890</Text>
                         </View>
                     </View>

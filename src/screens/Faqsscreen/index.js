@@ -36,7 +36,7 @@ const Faqsscreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             {/* header Ip */}
-            <HeaderDy isBack istitle Headertitle={"FAQs"} />
+            <HeaderDy isBack istitle Headertitle={"FAQs"} iconstylestyles={{paddingLeft:17}}/>
 
             <ScrollView style={styles.bodyContainer}>
 

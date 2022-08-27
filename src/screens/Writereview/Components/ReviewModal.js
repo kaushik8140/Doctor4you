@@ -23,7 +23,20 @@ const ReviewModal = props => {
 
 
                 <Text style={styles.logouttext}>{'Completed'}</Text>
-                <Text style={styles.appoitext}>{'Your appointment booking successfully completed. Dr. Jane Cooper will Contact you soon'}</Text>
+                {/* <Text style={styles.appoitext}>{'Your appointment booking successfully completed. Dr. Jane Cooper will Contact you soon'}</Text> */}
+
+                <Text style={styles.appoitext}>
+                    {'Your appointment booking successfully completed.'}
+                    {` `}
+                    <Text style={styles.doctortext}>
+                        {'Dr. Jane Cooper '}
+                    </Text>
+                    <Text style={styles.appoitext}>
+                        {'will Contact you soon'}
+                    </Text>
+
+                </Text>
+
                 <ButtonDy
                     onPress={async () => {
                         modaltoggle();
@@ -79,6 +92,15 @@ const styles = StyleSheet.create({
         color: Colors.gray,
         fontSize: 16,
         fontFamily: FontFamily.primary,
-        paddingTop: 20
+        paddingTop: 20,
+        lineHeight: 20
+    },
+    doctortext: {
+        textAlign: 'center',
+        color: Colors.gray,
+        fontSize: 16,
+        fontFamily: FontFamily.semiBold,
+        paddingTop: 20,
+        lineHeight: 20
     }
 });

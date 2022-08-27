@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: '4%',
         paddingTop: 40,
         flexGrow: 1,
+        
     },
     continueButton: {
         marginTop: 100,

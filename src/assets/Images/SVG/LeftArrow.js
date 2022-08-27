@@ -10,7 +10,7 @@ const LeftArrow = ({ color = "#ED7E03", scale = 1, ...props }) => {
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <Rect width={40} height={40} rx={10} fill="#F6F6F6" />
+    <Rect width={40} height={40} rx={10} fill="#FFFFFF" />
     <Rect
       x={0.5}
       y={0.5}

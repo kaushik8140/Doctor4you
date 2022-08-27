@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         color: Colors.bordergray,
         fontSize: 12,
         paddingTop: 5,
+        lineHeight:20,
     },
     title: {
         fontFamily: FontFamily.semiBold,

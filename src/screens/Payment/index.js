@@ -23,7 +23,7 @@ const Payment = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.safeContainer}>
             {/* header Ip */}
-            <HeaderDy isBack istitle Headertitle={"Payment"} />
+            <HeaderDy isBack istitle Headertitle={"Payment"} iconstylestyles={{ paddingLeft: 10 }} />
 
             <ScrollView contentContainerStyle={styles.bodyContainer}>
                 <Image

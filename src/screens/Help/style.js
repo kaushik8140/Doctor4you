@@ -14,6 +14,8 @@ const styles = StyleSheet.create({
     continueButton: {
         position: 'absolute',
         bottom: 10,
+        backgroundColor:Colors.bordergray,
+        
     },
     buttontext: {
         fontFamily: FontFamily.bold,

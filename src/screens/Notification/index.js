@@ -29,7 +29,7 @@ const Notification = ({ navigation }) => {
         {
             icon: <Appointmentconfirmed />,
             name: 'Appointment confirmed',
-            number: "Your Appointment with Dr. Mahmud Nik is confirmed. He will call you at 11:00 AM | 10 June, 2020",
+            number: "Your appointment will added in appointment list. He will call you at 11:00 AM | 10 June, 2020.",
         },
     ];
 
@@ -47,7 +47,7 @@ const Notification = ({ navigation }) => {
         {
             icon: <Appointmentconfirmed />,
             name: 'Appointment confirmed',
-            number: "Your Appointment with Dr. Mahmud Nik is confirmed. He will call you at 11:00 AM | 10 June, 2020",
+            number: "Your appointment will added in appointment list. He will call you at 11:00 AM | 10 June, 2020.",
         },
         {
             icon: <Appointmentalarm />,

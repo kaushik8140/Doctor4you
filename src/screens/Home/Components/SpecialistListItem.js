@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
         marginRight: 10,
         width: 97,
         height: 122,
-
         backgroundColor: Colors.white,
 
         // shadowColor: Colors.black,

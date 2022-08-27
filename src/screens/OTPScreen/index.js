@@ -23,7 +23,7 @@ const OTPScreen = ({ navigation }) => {
         <SafeAreaView style={styles.safeContainer}>
             <ScrollView contentContainerStyle={styles.scrollContainer}>
                 {/* header Ip */}
-                <HeaderDy isBack istitle />
+                <HeaderDy isBack istitle  iconstylestyles={{paddingLeft:-100}}/>
 
                 {/* verify text */}
                 <Text style={styles.verifytext}>{'OTP'}</Text>

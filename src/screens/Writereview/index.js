@@ -27,7 +27,7 @@ const Writereview = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             {/* header Ip */}
-            <HeaderDy isBack istitle Headertitle={"Write a review"} />
+            <HeaderDy isBack istitle Headertitle={"Write a review"} iconstylestyles={{ paddingLeft: 15 }} />
 
             <ScrollView style={styles.bodyContainer}>
                 <Image
@@ -35,8 +35,21 @@ const Writereview = ({ navigation }) => {
                     style={styles.Imageicon}
                     resizeMode="cover"
                 />
-                <Text style={styles.drtext}>How was your experience
-                    with Dr. Jane Cooper ?</Text>
+                {/* <Text style={styles.drtext}>How was your experience
+                    with Dr. Jane Cooper ?</Text> */}
+
+                    <Text style={styles.drtext}>
+                    {'How was your experience with'}
+                    {` `}
+                    <Text style={styles.jandrtext}>
+                        {'Dr. Jane Cooper'}
+                    </Text>
+                    <Text style={styles.drtext}>
+                        {'?'}
+                    </Text>
+
+                </Text>
+
                 <View style={styles.starview}>
                     <Starrating />
                     <View width={10} />
@@ -76,7 +89,7 @@ const Writereview = ({ navigation }) => {
                             <ErrorMessage render={msg => <ErrorTextDY title={msg} />} name="message" />
                             <View height={20} />
 
-                            <Text style={styles.textlike}>Would you recommend Dr. Jane Cooper to your freiends?</Text>
+                            <Text style={styles.textlike}>Would you recommend Dr. Jane Cooper to your friends?</Text>
 
                             <View height={20} />
 

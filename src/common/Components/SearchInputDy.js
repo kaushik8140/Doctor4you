@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     },
     textInput: {
         flex: 1,
-        color: Colors.black,
+        color: Colors.primary,
         fontFamily: FontFamily.primary,
         fontSize: 16,
         paddingLeft: 10,

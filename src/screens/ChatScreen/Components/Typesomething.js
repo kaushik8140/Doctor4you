@@ -6,12 +6,14 @@ import {
     Platform,
     TextInput,
     Image,
+    Text
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import FontFamily from '../../../common/FontFamily';
 import Colors from '../../../common/Colors';
 import AttachIcon from '../../../assets/Images/SVG/AttachIcon';
 import MutevoiceIcon from '../../../assets/Images/SVG/MutevoiceIcon';
+import Send from '../../../assets/Images/Temp/send.png';
 
 
 const Typesomething = (
@@ -31,7 +33,14 @@ const Typesomething = (
                 placeholderTextColor={Colors.primary}
                 onSubmitEditing={onSubmitEditing}
             />
-            <MutevoiceIcon />
+            {
+                (textSearch == "") ?
+                    <MutevoiceIcon /> :
+                    <Image
+                        source={Send}
+                        style={styles.sendiconstyle}
+                    />
+            }
         </View>
     );
 };
@@ -58,4 +67,8 @@ const styles = StyleSheet.create({
         fontSize: 16,
         paddingLeft: 10,
     },
+    sendiconstyle: {
+        height: 30,
+        width: 30
+    }
 });

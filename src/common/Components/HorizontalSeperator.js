@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     seperatorLine: {
         borderBottomColor: Colors.subgray,
         // paddingTop: 10,
+        marginTop: 10,
         borderBottomWidth: 1,
     },
 });

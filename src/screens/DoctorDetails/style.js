@@ -108,7 +108,8 @@ const styles = StyleSheet.create({
         color: Colors.gray,
         fontFamily: FontFamily.light,
         fontSize: 14,
-        justifyContent: "center"
+        justifyContent: "center",
+        lineHeight: 20
     },
     Workingtext: {
         color: Colors.gray,
